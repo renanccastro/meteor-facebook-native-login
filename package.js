@@ -19,7 +19,7 @@ Npm.depends({
 });
 
 Cordova.depends({
-  "cordova-plugin-facebook4": "1.7.1"
+  "cordova-plugin-facebook4": "6.2.0"
 });
 
 Package.onUse(function(api) {
