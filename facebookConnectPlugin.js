@@ -19,7 +19,10 @@ const facebookConnectPlugin = (()=> {
     let fakeFacebookConnectPlugin = {};
 
     let makeNopFunc = (key)=>{
-      return ()=>{
+      return (...args)=>{
+        if(global.facebookConnectPlugin){
+            return global.facebookConnectPlugin[key](...args);
+        }
         throw new NotUnderCordovaEnv(key);
       }
     };
