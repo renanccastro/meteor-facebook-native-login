@@ -1,6 +1,6 @@
 Package.describe({
   name: 'renanccastro:facebook-native-login',
-  version: '0.2.5',
+  version: '0.3.0',
   // Brief, one-line summary of the package.
   summary: 'Use native api to login with Facebook',
   // URL to the Git repository containing the source code for this package.
