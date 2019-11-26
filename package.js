@@ -1,6 +1,6 @@
 Package.describe({
   name: 'renanccastro:facebook-native-login',
-  version: '0.2.0',
+  version: '0.2.1',
   // Brief, one-line summary of the package.
   summary: 'Use native api to login with Facebook',
   // URL to the Git repository containing the source code for this package.
@@ -19,7 +19,7 @@ Npm.depends({
 });
 
 Cordova.depends({
-  "cordova-plugin-facebook4": "https://github.com/renanccastro/cordova-plugin-facebook4.git#74c9ce748405568ba92cc76f60b3bf1c931558fc"
+  "cordova-plugin-facebook4": "https://github.com/renanccastro/cordova-plugin-facebook4/tarball/master"
 });
 
 Package.onUse(function(api) {
