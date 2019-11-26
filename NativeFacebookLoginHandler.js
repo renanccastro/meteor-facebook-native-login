@@ -1,7 +1,8 @@
-import { _ } from "underscore"
-import { expect } from "chai"
-import { HTTP } from "meteor/http"
-import { Accounts } from "meteor/accounts-base";
+import {_} from "underscore"
+import {expect} from "chai"
+import {HTTP} from "meteor/http"
+import {Meteor} from "meteor/meteor"
+import {Accounts} from "meteor/accounts-base";
 
 
 class NativeFacebookLoginHandler {
@@ -42,7 +43,11 @@ class NativeFacebookLoginHandler {
           facebook: identity
         }
       };
-      user._id = Accounts.insertUserDoc({}, user);
+      if(options.userCreationMethod){
+        user = Meteor.call(options.userCreationMethod, user);
+      }else {
+        user._id = Accounts.insertUserDoc({}, user);
+      }
     }
 
     return {
