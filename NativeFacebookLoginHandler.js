@@ -17,10 +17,10 @@ class NativeFacebookLoginHandler {
   }
 
   login(options) {
-    console.log('native-facebook');
     if (options.methodName != 'native-facebook') {
       return;
     }
+    console.log('native-facebook');
     // authResponse accessToken, expiresIn, userID
     expect(options).to.have.property("accessToken").that.is.a("string");
     expect(options).to.have.property("expiresIn").that.is.a("string");
@@ -76,7 +76,7 @@ class NativeFacebookLoginHandler {
 NativeFacebookLoginHandler.METHOD_NAME = "native-facebook";
 let loginHandler = new NativeFacebookLoginHandler();
 
-Accounts.registerLoginHandler(NativeFacebookLoginHandler.METHOD_NAME, (options)=>{
+Accounts.registerLoginHandler((options)=>{
   return loginHandler.login(options)
 });
 export { NativeFacebookLoginHandler }
