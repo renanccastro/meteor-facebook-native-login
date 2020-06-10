@@ -76,7 +76,7 @@ class NativeFacebookLoginHandler {
 NativeFacebookLoginHandler.METHOD_NAME = "native-facebook";
 let loginHandler = new NativeFacebookLoginHandler();
 
-Accounts.registerLoginHandler((options)=>{
+Accounts.registerLoginHandler(NativeFacebookLoginHandler.METHOD_NAME, (options)=>{
   return loginHandler.login(options)
 });
 export { NativeFacebookLoginHandler }
