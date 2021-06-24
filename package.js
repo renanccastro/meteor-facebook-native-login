@@ -1,6 +1,6 @@
 Package.describe({
   name: 'renanccastro:facebook-native-login',
-  version: '0.3.3',
+  version: '1.0.0',
   // Brief, one-line summary of the package.
   summary: 'Use native api to login with Facebook',
   // URL to the Git repository containing the source code for this package.
@@ -23,7 +23,7 @@ Cordova.depends({
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('2.3');
+  api.versionsFrom(['1.9', '2.3'])
   api.use('ecmascript');
   api.use("accounts-base");
   api.use("accounts-facebook");
